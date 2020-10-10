@@ -1,0 +1,17 @@
+// const classes = useStyles();
+  // const bott = new discord.Client();
+  // const [bottObj, setBott] = useState(bott)
+  // const [logged, setLogged] = useState(false);
+  // const token = "NzYxNDI0MzEwNzAzMjI2OTMw.X3aZpg.6wMjzHPUBXdSXVvaPTzh3R4M_lI";
+  // const channel_id = window.location.hash?.split("#")[1]?.split("%")[0];
+  // const [id, setId] = useState(channel_id);
+  
+  // const mute = (bot, channel_id) => {
+  //   const general = bottObj.channels.cache.find(channel => channel.id === id);
+  //   general.send(",m")
+  // }
+
+  // const unMute = (bot, channel_id) => {
+  //   const general = bottObj.channels.cache.find(channel => channel.id === id);
+  //   general.send(",u");
+  // }
