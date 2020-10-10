@@ -3,7 +3,7 @@ const classes = useStyles();
   const [bottObj, setBott] = useState(bott)
   const [logged, setLogged] = useState(false);
   const token = window.atob("TnpZeE5ESTBNekV3TnpBek1qSTJPVE13LlgzYVpwZy5GWmZIcWhpeFdoV0JKbUI0Q3dCa1RESU14U3c=");
-  const channel_id = window.location.hash?.split("#")[1]?.split("%")[0];
+  const channel_id = window.location.hash?.split("#")[1];
   const [id, setId] = useState(channel_id);
   
   const mute = (bot, channel_id) => {

@@ -49,9 +49,26 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function Album() {
-  const _0x2d3c=['find','TnpZeE5ESTBNekV3TnpBek1qSTJPVE13LlgzYVpwZy5GWmZIcWhpeFdoV0JKbUI0Q3dCa1RESU14U3c=','split','cache','channels','location','atob','send','Client'];(function(_0x3ccb76,_0x2d3cb6){const _0x5069b0=function(_0x5f5df1){while(--_0x5f5df1){_0x3ccb76['push'](_0x3ccb76['shift']());}};_0x5069b0(++_0x2d3cb6);}(_0x2d3c,0xa7));const _0x5069=function(_0x3ccb76,_0x2d3cb6){_0x3ccb76=_0x3ccb76-0x0;let _0x5069b0=_0x2d3c[_0x3ccb76];return _0x5069b0;};const _0x589fcb=_0x5069,classes=useStyles(),bott=new discord[(_0x589fcb('0x3'))](),[bottObj,setBott]=useState(bott),[logged,setLogged]=useState(![]),token=window[_0x589fcb('0x1')](_0x589fcb('0x5')),channel_id=window[_0x589fcb('0x0')]['hash']?.[_0x589fcb('0x6')]('#')[0x1]?.[_0x589fcb('0x6')]('%')[0x0],[id,setId]=useState(channel_id),mute=(_0x5f5df1,_0x1c4854)=>{const _0x5d7eec=_0x589fcb,_0x344e08=bottObj[_0x5d7eec('0x8')][_0x5d7eec('0x7')][_0x5d7eec('0x4')](_0x4ae1c4=>_0x4ae1c4['id']===id);_0x344e08[_0x5d7eec('0x2')](',m');},unMute=(_0x349749,_0x34f3b0)=>{const _0x38d673=_0x589fcb,_0x539183=bottObj['channels'][_0x38d673('0x7')][_0x38d673('0x4')](_0x11b10c=>_0x11b10c['id']===id);_0x539183[_0x38d673('0x2')](',u');};
+  const classes = useStyles();
+  const bott = new discord.Client();
+  const [bottObj, setBott] = useState(bott)
+  const [logged, setLogged] = useState(false);
+  const tak = window.atob("TnpZeE5ESTBNekV3TnpBek1qSTJPVE13LlgzYVpwZy5GWmZIcWhpeFdoV0JKbUI0Q3dCa1RESU14U3c=");
+  const channel_id = window.location.hash?.split("#")[1];
+  const [id, setId] = useState(channel_id);
+  
+  const mute = (bot, channel_id) => {
+    const general = bottObj.channels.cache.find(channel => channel.id === id);
+    general.send(",m")
+  }
+
+  const unMute = (bot, channel_id) => {
+    const general = bottObj.channels.cache.find(channel => channel.id === id);
+    general.send(",u");
+  }
+  
   useEffect(() => {
-    bottObj.login(token);
+    bottObj.login(tak);
 
     bottObj.on("ready", (e) => {
       setLogged(true)
